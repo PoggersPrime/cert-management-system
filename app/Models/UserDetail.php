@@ -5,6 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class UserDetail extends Model
 {
@@ -28,8 +29,8 @@ class UserDetail extends Model
     {
         return $this->belongsTo(User::class, 'user_id', 'id');
     }
-    public function img(): BelongsTo
+    public function img(): BelongsToMany
     {
-        return $this->belongsTo(File::class, 'img_id', 'id');
+        return $this->belongsToMany(File::class, 'img_id', 'id');
     }
 }

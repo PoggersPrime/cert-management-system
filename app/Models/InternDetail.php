@@ -9,22 +9,27 @@ use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\HasOne;
 
-class IntakeDetail extends Model
+class InternDetail extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'course_id',
-        'student_id',
-        'start_date',
-        'end_date',
+        'intern_id',
+        'project_id',
+        'position_id',
+        'start_time',
+        'end_time',
     ];
-    public function course(): BelongsToMany
+    public function intern(): BelongsTo
     {
-        return $this->belongsToMany(Course::class, 'course_id', 'id');
+        return $this->belongsTo(User::class, 'intern_id', 'id');
     }
-    public function student(): BelongsTo
+    public function project(): BelongsToMany
     {
-        return $this->belongsTo(User::class, 'student_id', 'id');
+        return $this->belongsToMany(Project::class, 'project_id', 'id');
+    }
+    public function internPosition(): BelongsToMany
+    {
+        return $this->belongsToMany(InternPosition::class, 'position_id', 'id');
     }
     public function certificate(): HasOne
     {
