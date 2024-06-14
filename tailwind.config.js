@@ -6,7 +6,22 @@ export default {
         "./resources/**/*.vue",
     ],
     theme: {
-        extend: {},
+        extend: {
+            transitionProperty: {
+                transform: "transform",
+            },
+        },
+    },
+    variants: {
+        extend: {
+            translate: [
+                "responsive",
+                "hover",
+                "focus",
+                "active",
+                "group-hover",
+            ],
+        },
     },
     plugins: [],
 };

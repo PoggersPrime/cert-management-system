@@ -6,7 +6,7 @@
                     alt="" class="w-24">
                 <div class="pt-16">
                     <a href="{{ route('cert-check') }}"
-                        class="text-[#EF602F] text-2xl hover::after inline-block w-2/6W max-lg:text-lg max-md:text-sm">Validate
+                        class="text-[#EF602F] text-2xl hover::after inline-block w-2/6W max-lg:text-lg hover:underline max-md:text-sm">Validate
                         Your Certificate
                         <i class="fa fa-smile-o" aria-hidden="true"></i></a>
                 </div>

@@ -7,11 +7,12 @@
     <script src="https://kit.fontawesome.com/59ab81e02a.js" crossorigin="anonymous"></script>
     <title>{{ $title ?? 'Welcome' }}</title>
     @vite('resources/css/app.css')
-
+    @livewireStyles()
 </head>
 
 <body>
     {{ $slot }}
+    @livewireScripts()
 </body>
 
 </html>
