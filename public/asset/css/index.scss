@@ -1,0 +1,500 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// for change when button is clicked
+$primary: #007bff;
+$bg-primary: #2f3336;
+$bg-secondary: #e2e6ea;
+$bg-info: #dddddd;
+$white: white;
+
+.container {
+  padding: 2rem;
+}
+a {
+  text-decoration: none;
+}
+.aside-counter {
+  width: 10% !important;
+  //   transform: scaleX(0.33);
+  text-align: center;
+  .aside-header {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $bg-secondary;
+    color: $white;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1rem 2rem;
+    border-radius: 25px;
+
+    .aside-header-title {
+      text-align: start;
+      display: none; // Hide the title by default
+    }
+
+    .aside-header-logo {
+      display: block !important;
+      margin-left: 0.8rem;
+      color: black;
+    }
+
+    .aside-header-cross {
+      display: block; // Show the cross icon
+      margin-left: auto; // Align the cross icon to the right
+      cursor: pointer; // Change cursor to pointer for better UX
+    }
+  }
+  ul {
+    list-style: none;
+    .aside-list {
+      .aside-content {
+        display: none;
+      }
+    }
+  }
+}
+/* Basic form styles */
+.form {
+  margin: 0 auto;
+}
+
+.form form {
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.form-item {
+  margin-bottom: 15px;
+}
+
+.form-item label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-item input[type="text"],
+.form-item input[type="email"],
+.form-item textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.form-item textarea {
+  height: 100px; /* adjust as needed */
+}
+
+.form-item button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.form-item button:hover {
+  background-color: #0056b3;
+}
+
+.content-counter {
+  width: 90% !important;
+}
+.btn {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 12px;
+  color: black;
+  background-color: $bg-secondary;
+  &:hover {
+    background-color: #cad1d9;
+  }
+}
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+aside .aside-container {
+  background-color: $bg-primary;
+  width: 20%;
+  height: 100%;
+  padding: 1rem;
+  transition: width 0.3s ease;
+  transform-origin: left;
+  position: fixed;
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  .aside-header {
+    display: flex;
+    align-items: top;
+    justify-content: space-between;
+
+    .aside-header-title {
+      margin-bottom: 1rem;
+      color: $white !important;
+      font-size: 20px;
+    }
+    .aside-header-logo {
+      display: none;
+      color: black;
+    }
+    #aside-header-cross {
+      display: none;
+    }
+  }
+  ul {
+    margin-top: 10px;
+    .active {
+      border-radius: 25px;
+      background-color: $bg-secondary;
+      a {
+        color: black !important;
+      }
+      .aside-logo {
+        color: black !important;
+      }
+      .aside-content{
+        color: black;
+      }
+    }
+    .aside-list {
+      list-style: none;
+
+      .aside-nav-link {
+        text-decoration: none;
+        color: $white;
+
+        width: 100%;
+        display: inline-block;
+        font-size: 20px;
+        line-height: 40px;
+        border-radius: 25px;
+        padding: 0 9px;
+        margin: 5px 0;
+        .aside-logo {
+          margin-right: 0.3rem;
+          color: white;
+          font-size: 16px;
+        }
+        &:hover {
+          background-color: $bg-secondary;
+          color: black;
+
+          .aside-logo {
+            margin-right: 12px;
+            color: black;
+            font-size: 16px;
+            transition: ease-in 0.2s;
+          }
+        }
+      }
+    }
+  }
+}
+.content-wrapper {
+  width: 80%;
+  float: right;
+  transition: width 0.3s ease;
+
+  // breadcrumb
+
+  .breadcrumb {
+    margin: 2rem 0 0 2rem;
+    a {
+      text-decoration: none;
+      color: $primary;
+      margin-right: 5px;
+      margin-left: 5px;
+      font-size: 18px;
+    }
+    span {
+      color: #666;
+      font-size: 20px;
+      margin-right: 5px;
+      margin-left: 5px;
+    }
+  }
+
+  // breadcrumb
+
+  /* Optional: Add some spacing between items */
+  .content-main-container {
+    padding: 1rem;
+    border-radius: 25px;
+  }
+  nav {
+    background-color: $bg-secondary;
+    .nav-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 16px 0 8px;
+      .navigations {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .side-bar-toggle {
+          text-decoration: none;
+          font-size: 16px;
+        }
+        a {
+          display: inline-block;
+          text-decoration: none;
+          padding: 1rem;
+          color: black;
+          font-size: 20px;
+          &:hover {
+            background-color: $bg-info;
+          }
+        }
+      }
+      .navigation-end {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .search-bar {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          .input-box {
+            font-size: 18px;
+            width: 100%;
+            border: none;
+          }
+          .search-btn {
+            border-radius: 0 25px 25px 0;
+            font-size: 12px;
+            padding: 4px;
+            border: none;
+            background-color: white;
+            color: black;
+          }
+        }
+        .user-profile {
+          margin: 0 14px;
+          .profile-icon {
+            cursor: pointer;
+          }
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 120px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+            a {
+              color: black;
+              padding: 12px 16px;
+              text-decoration: none;
+              display: block;
+              &:hover {
+                background-color: #f1f1f1;
+                color: black;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.content-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem;
+  .content-title {
+    font-weight: bold;
+    text-decoration: wavy;
+  }
+}
+// table
+.table-wrapper {
+  overflow: auto;
+  table {
+    width: 100%;
+    border-collapse: collapse;
+
+    th {
+      border: 1px solid #dddddd;
+      text-align: center;
+      font-size: 22px;
+      padding: 5px;
+    }
+    td {
+      border: 1px solid #dddddd;
+      text-align: center;
+      font-size: 20px;
+      padding: 5px;
+    }
+
+    tr {
+      &:nth-child(even) {
+        background-color: #dddddd;
+      }
+    }
+  }
+}
+// table
+
+// card
+
+.content-card-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  .content-card {
+    // min-width: 300px;
+    max-width: 400px !important;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    object-fit: cover;
+    border-radius: 25px;
+    padding: 1rem;
+    height: auto;
+    .content-title {
+      text-align: center;
+    }
+    .content-image {
+      img {
+        max-width: 100%;
+        max-height: 100%;
+      }
+    }
+  }
+  .content-description-footer {
+    text-align: end;
+  }
+}
+
+// pagination
+.pagination-wrapper {
+  text-align: center;
+}
+.pagination {
+  display: inline-block;
+  margin-top: 16px;
+
+  a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: 1px solid $bg-info;
+  }
+  a.active {
+    background-color: $bg-info;
+    color: black;
+    border: 1px solid $bg-info;
+  }
+  a:hover:not(.active) {
+    background-color: $bg-info;
+  }
+}
+
+// pagination
+@media screen and (max-width: 1200px) and (min-width: 780px) {
+  .aside-counter {
+    .aside-header {
+      flex-direction: row-reverse;
+      .aside-header-title {
+        display: none;
+      }
+    }
+  }
+}
+// media screen for responsiveness
+@media screen and (max-width: 840px) {
+  .aside-header-title {
+    font-size: 20px;
+    color: $white !important;
+  }
+  .aside-list {
+    .aside-logo {
+      display: none;
+    }
+    .aside-content {
+      font-size: 16px;
+    }
+  }
+  .aside-counter {
+    .aside-logo {
+      display: block !important;
+    }
+  }
+}
+@media screen and (max-width: 780px) {
+  .main-wrapper {
+    position: relative;
+  }
+  .aside-container {
+    display: none; // Ensure that aside container is hidden on smaller screens
+  }
+  .content-wrapper {
+    width: 100%; // Ensure that content takes up full width on smaller screens
+  }
+  .aside-counter {
+    background-color: $bg-primary;
+    width: 50% !important; // Adjust the width as needed
+    height: 100%;
+    padding: 1rem;
+    transition: width 0.3s ease;
+    transform-origin: left;
+    position: fixed;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 9999;
+    display: block !important;
+    .aside-header {
+      flex-direction: row;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+
+      .aside-list {
+        display: block !important; // Ensure list items are displayed as blocks
+        margin-bottom: 10px; // Add some spacing between list items
+        .aside-nav-link {
+          &:hover {
+            color: black;
+            .aside-content {
+              color: black;
+            }
+          }
+        }
+      }
+
+      .aside-content {
+        display: block !important; // Ensure links are displayed as blocks
+        color: $white; // Adjust text color as needed
+        text-decoration: none; // Remove underlines from links
+        padding: 10px; // Add padding to links for better touch interaction
+      }
+
+      .aside-logo {
+        display: none !important;
+      }
+    }
+  }
+  .content-counter {
+    width: 100% !important; // Adjust the width as needed
+    z-index: 1;
+  }
+  #aside-header-cross {
+    display: block !important;
+    color: black;
+  }
+}

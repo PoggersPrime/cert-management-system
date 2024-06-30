@@ -58,6 +58,10 @@ class User extends Authenticatable
     {
         return $this->hasMany(IntakeDetail::class, 'student_id', 'id');
     }
+    public function intern(): HasMany
+    {
+        return $this->hasMany(InternDetail::class, 'intern_id', 'id');
+    }
     public function certificate(): HasMany
     {
         return $this->hasMany(Certificate::class, 'user_id', 'id');

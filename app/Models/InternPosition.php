@@ -10,7 +10,7 @@ class InternPosition extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'name',
+        'title',
         'description'
     ];
     public function internDetail(): HasMany
